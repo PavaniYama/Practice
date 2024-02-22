@@ -1,2 +1,2 @@
 # Practice
-CAPSTONE project repository
+CAPSTONE project Practice repository
