@@ -5,3 +5,4 @@ This tutorial foucuses mainly on git and using github as its remote
 
 This repository is built step by step in the tutorial.
 it now include steps for github
+This line has been addded from branch update-readme
