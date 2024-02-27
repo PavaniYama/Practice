@@ -1,0 +1,68 @@
+Application Program Interface :
+	It is a way for two computers to talk to each other over the web.
+Example :
+	 A delivery app can use the Google Maps API to support location tracking instead of building one 
+from scratch.
+
+
+REST API : An API that follows the REST standard is called RESTful API.Here is a good example when designing and using a RESTful API using the example of a
+survey app.
+
+	1.Basic format
+	2.HTTP verbs
+	3.URL endpoints
+	4.Status codes
+The format of a RESTful API has three main components: 1) URL endpoint; 2) HTTP verb
+	URL endpoint: Is a URL link that represents the resources we want to access. Resources can be text, images, documents or any data entry. 
+		For example, 
+			example.com/surveys allows us to view or create survey templates and 
+			example.com/surveys/123/responses allows us to do the same for all responses of survey 123.
+	HTTP verb: Tells the server what we want to do with the URL endpoint resource. 
+		For example, 
+			POST request means we want to create a new survey template and a
+ 			GET request means we want to view an existing survey template.
+Request:
+		GET http://example.com/surveys/123/responses
+Response:
+// HTTP status code: 200
+{
+  survey_id: 123,
+  survey_title: "nps onboarding survey",
+  responses: [
+  {
+    response_id: 42,
+    nps_score: 9,
+    feedback: "love the service",
+    respondent_id: 42
+  }
+  ...
+ ]
+}
+
+2.HTTP verbs
+There are 5 basic verb commands when making a HTTP request:
+
+GET: make a read only request to view either a single or list of multiple resources
+POST: creating  a new resuource.
+DELETE: destroy the given resource based on the id provided
+PUT: update the entire fields of the resource based on the given body of the request or create a new one if not already exist
+PATCH: update only the fields of the resource if it exists.
+
+This is commonly referred to as a CRUD application.
+
+3.URl endpoint :
+	A URL endpoint in a RESTful API represents any given object, data or service the API can access. 
+For example, 
+	example.com/surveys represents all the survey templates and 
+	example.com/surveys/123/responses the data for all responses of a given survey.
+
+4.Status Codes :
+Upon receiving a HTTP request in the basic RESTful format the server will return a HTTP status code along with any optional JSON payloads. 	
+
+	200 OK             Request was successful.
+	401 Unauthorized   Server requires authentication.
+`	404 Not Found      Page not found
+
+
+
+
